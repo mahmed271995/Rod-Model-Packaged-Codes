@@ -7,9 +7,16 @@ Organization is as follows:
 1. Linear: Has the rod model packaged codes considering linear constitutive relationship ($$\vec{q} = [\mathbf{B}] \vec{\kappa}$$)
 
 ## Instructions for running code
-
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mahmed271995/Rod-Model-Packaged-Codes) - Open the git repository on MATLAB online or Download the zip file
+Alternatively lone this repo using 
+```
+git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
+```
 1. Linear:
-  *
+  * Navigate to the "Linear" folder
+  * Open the file main.mlx
+  * Click "Run" to execute the simulation. This will generate the plots, save the variable data, and create video files.
+
 
 
 
