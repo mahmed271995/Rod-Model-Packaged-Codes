@@ -4,7 +4,7 @@ This repository contains MATLAB codes for a fully computational nonlinear rod mo
 The code is structured for ease of use, allowing users to modify boundary conditions, numerical parameters, and material properties. However, certain critical files are protected to prevent accidental changes that could disrupt the functionality of the model.
 
 Organization is as follows:
-1. Linear: Has the rod model packaged codes considering linear constitutive relationship (```\vec{q} = [\mathbf{B}] \vec{\kappa}```)
+1. Linear: Has the rod model packaged codes considering linear constitutive relationship ($$\vec{q} = [\mathbf{B}] \vec{\kappa}$$)
 
 ## Instructions for running code
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mahmed271995/Rod-Model-Packaged-Codes) - Open the git repository on MATLAB online or Download the zip file  
@@ -13,13 +13,23 @@ Alternatively clone this repo using
 git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
 ```
 1. Linear:
-  * Navigate to the "Linear" folder
-  * Open the file main.mlx
-  * Click "Run" to execute the simulation. This will generate the plots, save the variable data, and create video file
-**Important:**
-  * Do **not** change the numerical parameters (`at`, `bt`, `gt`, `as`, `bs`, `gs`). These are set to ensure the model runs in an unconditionally stable condition. Changing them may cause the simulation to diverge.
-  * The user can change the time spatial (Length, ds, N) and temporal (dt, nT) simulation parameters
-  * The user can adjust the material properties: poison ratio (poiss), moment of Inertial (I1, I2 and I3, currently defined for a circular cross section), mass per unit lenght (m) and Young's modulus (E)
+  * Navigate to the `Linear` folder
+  * Open `main.mlx` and click **Run** to execute the simulation
+    - This generates plots, saves variable data, and creates a video file
+  * **Do not modify** the numerical parameters (`at`, `bt`, `gt`, `as`, `bs`, `gs`), as these ensure the model runs under an unconditionally stable condition. Changing them may cause the simulation to diverge
+  * The user can adjust the following parameters:
+    - Spatial and temporal parameters: rod length (`Length`), spatial step size (`ds`), number of nodes (`N`), time step (`dt`), and total time steps (`nT`).
+    - Material properties: Poisson’s ratio (`poiss`), moments of inertia (`I1`, `I2`, `I3`, defined for a circular cross-section), mass per unit length (`m`), and Young’s modulus (`E`).   
+  * Boundary conditions can be modified in the following files:
+    - `leftbound.m` — defines the first boundary condition (currently fixed):
+    ```
+    v1 = 0, v2 = 0, v3 = 0, w1 = 0, w2 = 0, w3 = 0
+    ```
+    - `YG_new_direct.m`** — defines the second boundary condition (currently sinusoidal bending load):  
+     ```
+     BV7  = 0, BV8  = 4 * sin(2 * pi * d * dt), BV9  = 0, BV10 = 0, BV11 = 0, BV12 = 0
+     ```
+     Here, `BV7–BV9` correspond to curvature components (`\kappa_1`, `\kappa_2`, `\kappa_3`) that map to bending moments **q** through the constitutive law, while `BV10–BV12` represent force components (`\f_1`, `\f_2`, `f_3`).
 
 
 
