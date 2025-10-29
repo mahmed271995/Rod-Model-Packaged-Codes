@@ -29,7 +29,8 @@ git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
      ```
      BV7  = 0, BV8  = 4 * sin(2 * pi * d * dt), BV9  = 0, BV10 = 0, BV11 = 0, BV12 = 0
      ```
-     Here, `BV7–BV9` correspond to curvature components ($\kappa_1$, $\kappa_2$, $\kappa_3$) that map to bending moments **q** through the constitutive law, while `BV10–BV12` represent force components ($\f_1$, $\f_2$, $f_3$).
+     Here, `BV7–BV9` correspond to curvature components ($\kappa_1$, $\kappa_2$, $\kappa_3$) that map to bending moments **q** through the constitutive law, while `BV10–BV12` represent force components ($f_1$, $f_2$, $f_3$).
+
 
 
 
