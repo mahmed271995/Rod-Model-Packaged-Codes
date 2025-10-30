@@ -16,7 +16,7 @@ Alternatively clone this repo using
 ```
 git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
 ```
-* Navigate to the `Linear` folder
+* Navigate to the `Linear` or `Nonlinear` folder
 * Open `main.mlx` and click **Run** to execute the simulation
   - This generates plots, saves variable data, and creates a video file
 * **Do not modify** the numerical parameters (`at`, `bt`, `gt`, `as`, `bs`, `gs`), as these ensure the model runs under an unconditionally stable condition. Changing them may cause the simulation to diverge
@@ -33,6 +33,7 @@ git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
    BV7  = 0, BV8  = 4 * sin(2 * pi * d * dt), BV9  = 0, BV10 = 0, BV11 = 0, BV12 = 0
    ```
     Here, `BV7–BV9` correspond to curvature components ($\kappa_1$, $\kappa_2$, $\kappa_3$) that map to bending moments **q** through the constitutive law, while `BV10–BV12` represent force components ($f_1$, $f_2$, $f_3$).
+
 
 
 
