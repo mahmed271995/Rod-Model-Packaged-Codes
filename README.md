@@ -9,7 +9,7 @@ Organization is as follows:
 $$  \left\lbrace \begin{array}{ccc} q_1 & q_2 & q_3 \end{array} \right\rbrace $$
 $$ = \left\lbrack \begin{array}{ccc} \end{array} \right\rbrack  $$
 
- $$ \left\lbrack \begin{array}{ccc} EI_1\kappa_1 & a & GJ\kappa_3  \end{array}\right\rbrack $$ 
+$$ \left\lbrack \begin{array}{ccc} EI_1\kappa_1 & a & GJ\kappa_3  \end{array}\right\rbrack $$ 
 
 
 ## Instructions for running code
@@ -36,6 +36,7 @@ git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
      BV7  = 0, BV8  = 4 * sin(2 * pi * d * dt), BV9  = 0, BV10 = 0, BV11 = 0, BV12 = 0
      ```
       Here, `BV7–BV9` correspond to curvature components ($\kappa_1$, $\kappa_2$, $\kappa_3$) that map to bending moments **q** through the constitutive law, while `BV10–BV12` represent force components ($f_1$, $f_2$, $f_3$).
+
 
 
 
