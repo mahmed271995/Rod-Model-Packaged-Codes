@@ -16,24 +16,23 @@ Alternatively clone this repo using
 ```
 git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
 ```
-1. Linear:
-  * Navigate to the `Linear` folder
-  * Open `main.mlx` and click **Run** to execute the simulation
-    - This generates plots, saves variable data, and creates a video file
-  * **Do not modify** the numerical parameters (`at`, `bt`, `gt`, `as`, `bs`, `gs`), as these ensure the model runs under an unconditionally stable condition. Changing them may cause the simulation to diverge
-  * The user can adjust the following parameters:
-    - Spatial and temporal parameters: rod length (`Length`), spatial step size (`ds`), number of nodes (`N`), time step (`dt`), and total time steps (`nT`).
-    - Material properties: Poisson’s ratio (`poiss`), moments of inertia (`I1`, `I2`, `I3`, defined for a circular cross-section), mass per unit length (`m`), and Young’s modulus (`E`).   
-  * Boundary conditions can be modified in the following files:
-    - `leftbound.m` — defines the first boundary condition (currently fixed):
-    ```
-    v1 = 0, v2 = 0, v3 = 0, w1 = 0, w2 = 0, w3 = 0
-    ```
-    - `YG_new_direct.m` — defines the second boundary condition (currently sinusoidal bending load):  
-     ```
-     BV7  = 0, BV8  = 4 * sin(2 * pi * d * dt), BV9  = 0, BV10 = 0, BV11 = 0, BV12 = 0
-     ```
-      Here, `BV7–BV9` correspond to curvature components ($\kappa_1$, $\kappa_2$, $\kappa_3$) that map to bending moments **q** through the constitutive law, while `BV10–BV12` represent force components ($f_1$, $f_2$, $f_3$).
+* Navigate to the `Linear` folder
+* Open `main.mlx` and click **Run** to execute the simulation
+  - This generates plots, saves variable data, and creates a video file
+* **Do not modify** the numerical parameters (`at`, `bt`, `gt`, `as`, `bs`, `gs`), as these ensure the model runs under an unconditionally stable condition. Changing them may cause the simulation to diverge
+* The user can adjust the following parameters:
+  - Spatial and temporal parameters: rod length (`Length`), spatial step size (`ds`), number of nodes (`N`), time step (`dt`), and total time steps (`nT`).
+  - Material properties: Poisson’s ratio (`poiss`), moments of inertia (`I1`, `I2`, `I3`, defined for a circular cross-section), mass per unit length (`m`), and Young’s modulus (`E`).   
+* Boundary conditions can be modified in the following files:
+  - `leftbound.m` — defines the first boundary condition (currently fixed):
+  ```
+  v1 = 0, v2 = 0, v3 = 0, w1 = 0, w2 = 0, w3 = 0
+  ```
+  - `YG_new_direct.m` — defines the second boundary condition (currently sinusoidal bending load):  
+   ```
+   BV7  = 0, BV8  = 4 * sin(2 * pi * d * dt), BV9  = 0, BV10 = 0, BV11 = 0, BV12 = 0
+   ```
+    Here, `BV7–BV9` correspond to curvature components ($\kappa_1$, $\kappa_2$, $\kappa_3$) that map to bending moments **q** through the constitutive law, while `BV10–BV12` represent force components ($f_1$, $f_2$, $f_3$).
 
 
 
