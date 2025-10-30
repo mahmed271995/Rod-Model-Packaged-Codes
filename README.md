@@ -9,9 +9,7 @@ Organization is as follows:
 More specifically,
 
 $$
-\begin{Bmatrix}
-q_1 & q_2 & q_3
-\end{Bmatrix}
+\{ q_1 \;\; q_2 \;\; q_3 \}
 =
 \begin{bmatrix}
 EI_1 \kappa_1 & a & GJ \kappa_3
