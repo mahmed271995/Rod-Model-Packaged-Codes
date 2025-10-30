@@ -5,7 +5,8 @@ The code is structured for ease of use, allowing users to modify boundary condit
 
 Organization is as follows:
 1. Linear: Has the rod model packaged codes considering linear constitutive relationship ($$\vec{q} = [\mathbf{B}] \vec{\kappa}$$)
-2. Nonlinear: Has the rod model packaged codes considering nonlinear constitutive relationship ($$\vec{q} = \sum_{i=0}^{5} \mathbf{B_i} \vec{\kappa}^i$$
+2. Nonlinear: Has the rod model packaged codes considering nonlinear constitutive relationship ($$\vec{q} = \sum_{i=0}^{5} \mathbf{B_i} \vec{\kappa}^i$$)
+More specificly $$\begin{cmatrix} q_1 & q_2 & q_3 \end{cmatrix} = \begin{bmatrix} EI_1 \kappa_1 & a & GJ \kappa_3 \end{bmatrix}$$
 
 ## Instructions for running code
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mahmed271995/Rod-Model-Packaged-Codes) - Open the git repository on MATLAB online or Download the zip file  
@@ -31,6 +32,7 @@ git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
      BV7  = 0, BV8  = 4 * sin(2 * pi * d * dt), BV9  = 0, BV10 = 0, BV11 = 0, BV12 = 0
      ```
       Here, `BV7–BV9` correspond to curvature components ($\kappa_1$, $\kappa_2$, $\kappa_3$) that map to bending moments **q** through the constitutive law, while `BV10–BV12` represent force components ($f_1$, $f_2$, $f_3$).
+
 
 
 
