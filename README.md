@@ -4,7 +4,6 @@ This repository contains MATLAB codes for a fully computational nonlinear rod mo
 The code is structured for ease of use, allowing users to modify boundary conditions, numerical parameters, and material properties. However, certain critical files are protected to prevent accidental changes that could disrupt the functionality of the model.
 
 ## Organization is as follows:
-
 ### 1. Forward Code 
 Contains packaged code for solving the rod model equations using the forward approach, i.e., given a known constitutive law and known boundary conditions, solve for the unknown parameters  
 1) Linear: Has the rod model packaged codes considering linear constitutive relationship ($$\vec{q} = [\mathbf{B}] \vec{\kappa}$$)
@@ -46,4 +45,5 @@ git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
 
 ### 2. Inverse Code
 * Navigate to the `Inverse Code` folder
+
 
