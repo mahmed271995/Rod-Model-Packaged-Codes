@@ -10,8 +10,7 @@ Organization is as follows:
     1) Linear: Has the rod model packaged codes considering linear constitutive relationship ($$\vec{q} = [\mathbf{B}] \vec{\kappa}$$)
     2) Nonlinear: Has the rod model packaged codes considering nonlinear constitutive relationship ($$\vec{q} = \sum_{i=0}^{5} \mathbf{B_i} \vec{\kappa}^i$$) more specifically,
 
-    $$\left\lbrace \begin{array}{c} q_1 \newline q_2 \newline q_3 \end{array} \right\rbrace = \left\lbrace \begin{array}{c} E I_1 \kappa_1 \newline E I_2 \kappa_2 + a \kappa_2^3 + b \kappa_2^5 \newline G J \kappa_3  \end{array}\right\rbrace$$
-
+$$\left\lbrace \begin{array}{c} q_1 \newline q_2 \newline q_3 \end{array} \right\rbrace = \left\lbrace \begin{array}{c} E I_1 \kappa_1 \newline E I_2 \kappa_2 + a \kappa_2^3 + b \kappa_2^5 \newline G J \kappa_3  \end{array}\right\rbrace$$  
     3) Nonlinear and Non-homogeneous: Has the rod model packaged codes considering nonlinear and non-homogeneous constitutive relationship ($$\vec{q} = \sum_{i=0}^{5} \mathbf{B(s)_i} \vec{\kappa}^i$$) more specifically,
 
     $$\left\lbrace \begin{array}{c} q_1 \newline q_2 \newline q_3 \end{array} \right\rbrace = \left\lbrace \begin{array}{c} E I_1 \kappa_1 \newline (a s^3 - b s^2 + c s + d)*(e \kappa_2^3 + f \kappa_2) \newline G J \kappa_3  \end{array}\right\rbrace$$
