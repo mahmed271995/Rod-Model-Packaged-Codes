@@ -46,6 +46,10 @@ git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
 
 ### 2. Inverse Code
 * Navigate to the `Inverse Code` folder
+* The inverse code is set up for input **curvature data** only, but it can be adjusted to work with other types of input deformation data
+* The code requires curvature data as `Y_true`. Be sure to import this data before running the code
+* For more details, refer to the `README.md` file in the corresponding folder
+
 
 
 
