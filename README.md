@@ -6,9 +6,9 @@ This repository contains MATLAB codes for a fully computational nonlinear rod mo
 The code is structured for ease of use, allowing users to modify boundary conditions, numerical parameters, and material properties. However, certain critical files are protected to prevent accidental changes that could disrupt the functionality of the model.
 
 Organization is as follows:
-##1. **Forward Code:** Contains packaged code for solving the rod model equations using the forward approach, i.e., given a known constitutive law and known boundary conditions, solve for the unknown parameters
-    ###1. Linear: Has the rod model packaged codes considering linear constitutive relationship ($$\vec{q} = [\mathbf{B}] \vec{\kappa}$$)
-    ###2. Nonlinear: Has the rod model packaged codes considering nonlinear constitutive relationship ($$\vec{q} = \sum_{i=0}^{5} \mathbf{B_i} \vec{\kappa}^i$$) more specifically,
+## 1. **Forward Code:** Contains packaged code for solving the rod model equations using the forward approach, i.e., given a known constitutive law and known boundary conditions, solve for the unknown parameters
+    ### 1. Linear: Has the rod model packaged codes considering linear constitutive relationship ($$\vec{q} = [\mathbf{B}] \vec{\kappa}$$)
+    ### 2. Nonlinear: Has the rod model packaged codes considering nonlinear constitutive relationship ($$\vec{q} = \sum_{i=0}^{5} \mathbf{B_i} \vec{\kappa}^i$$) more specifically,
 $$  \left\lbrace \begin{array}{c} q_1 \newline q_2 \newline q_3 \end{array} \right\rbrace = \left\lbrace \begin{array}{c} E I_1 \kappa_1 \newline E I_2 \kappa_2 + a \kappa_2^3 + b \kappa_2^5 \newline G J \kappa_3  \end{array}\right\rbrace $$
 
     3. Nonlinear and Non-homogeneous: Has the rod model packaged codes considering nonlinear and non-homogeneous constitutive relationship ($$\vec{q} = \sum_{i=0}^{5} \mathbf{B(s)_i} \vec{\kappa}^i$$) more specifically,
@@ -38,6 +38,7 @@ git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
    BV7  = 0, BV8  = 4 * sin(2 * pi * d * dt), BV9  = 0, BV10 = 0, BV11 = 0, BV12 = 0
    ```
     Here, `BV7–BV9` correspond to curvature components ($\kappa_1$, $\kappa_2$, $\kappa_3$) that map to bending moments **q** through the constitutive law, while `BV10–BV12` represent force components ($f_1$, $f_2$, $f_3$).
+
 
 
 
