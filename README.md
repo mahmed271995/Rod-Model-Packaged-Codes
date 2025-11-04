@@ -1,7 +1,5 @@
 # Rod Model Code (Packaged)
 
-
-
 This repository contains MATLAB codes for a fully computational nonlinear rod model. For a detailed description of the rod model algorithm, please refer to the following [link](https://www.overleaf.com/read/qwysjxhrmtrw#b7f7cd).  
 The code is structured for ease of use, allowing users to modify boundary conditions, numerical parameters, and material properties. However, certain critical files are protected to prevent accidental changes that could disrupt the functionality of the model.
 
@@ -26,8 +24,8 @@ Alternatively clone this repo using
 ```
 git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
 ```
-### Forward Code
-* Navigate to the `Linear` or `Nonlinear` folder
+### 1. Forward Code
+* Navigate to one of the case folders: `Linear`, `Nonlinear` or `Nonlinear and Non-homogeneous`
 * Open `main.mlx` and click **Run** to execute the simulation
   - This generates plots, saves variable data, and creates a video file
 * **Do not modify** the numerical parameters (`at`, `bt`, `gt`, `as`, `bs`, `gs`), as these ensure the model runs under an unconditionally stable condition. Changing them may cause the simulation to diverge
@@ -45,113 +43,5 @@ git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
    ```
     Here, `BV7–BV9` correspond to curvature components ($\kappa_1$, $\kappa_2$, $\kappa_3$) that map to bending moments **q** through the constitutive law, while `BV10–BV12` represent force components ($f_1$, $f_2$, $f_3$).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### 2. Inverse Code
+* Navigate to the `Inverse Code` folder
