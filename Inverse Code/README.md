@@ -20,6 +20,9 @@ where the indices $i$ and $j$ are enumerating the time\-steps and space\-steps a
 ```matlab
 clc;
 
+%% Imported Data Name
+Y_true = Y_time_march;
+
 %% Parameters
 dt = 0.001;      % Time step size
 ds = 0.01;       % Step size for filament
@@ -52,9 +55,6 @@ k = zeros(3, nL, nT);
 % folderName = fullfile(pwd, 'folder');
 % file = dir(fullfile(folderName, 'file.mat'));
 % load(fullfile(folderName, files(i).name));
-
-%% Imported Data Name
-Y_true = Y_time_march_bend;
 
 k(:,:,:) = Y_true(7:9,:,:);
 
