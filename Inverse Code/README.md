@@ -4,7 +4,7 @@
 **The rod model equations and an inverse method algorithm:**
 
 
-![image_0.png](InverseCode_media/image_0.png)
+![image_0.png](README_media/image_0.png)
 
 
  **To understand the inverse algorithm used, see** [**Discretization Scheme (Section 4.2):**](https://drive.google.com/file/d/17qbHc1oj8cz9fjsMbCqZxY9cbfCvOirG/view?usp=sharing)
@@ -152,7 +152,7 @@ hold off
 set(gca,'FontSize',16);
 ```
 
-![figure_0.png](InverseCode_media/figure_0.png)
+![figure_0.png](README_media/figure_0.png)
 
 ```matlab
 
