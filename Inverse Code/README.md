@@ -4,7 +4,7 @@
 **The rod model equations and an inverse method algorithm:**
 
 
-![image_0.png](README_media/image_0.png)
+![image_0.png](InverseCode_media/image_0.png)
 
 
  **To understand the inverse algorithm used, see** [**Discretization Scheme (Section 4.2):**](https://drive.google.com/file/d/17qbHc1oj8cz9fjsMbCqZxY9cbfCvOirG/view?usp=sharing)
@@ -57,6 +57,17 @@ k = zeros(3, nL, nT);
 % load(fullfile(folderName, files(i).name));
 
 k(:,:,:) = Y_true(7:9,:,:);
+
+%% Add noise to input data
+% k1=k; % To see the difference in data
+% seed=100; % To reproduce the same noise every time
+% rng(seed);
+% [k,var] = awgn(k1,40); % Add white gaussian noise
+% %% See difference in input data to the model due to noise
+% plot(squeeze(k1(2,50,:)),'b','Marker',"*","MarkerSize",4,"LineStyle","none")
+% hold on
+% plot(squeeze(k(2,50,:)),'r','Marker',".","MarkerSize",4,"LineStyle","none")
+% hold off
 
 %% Initial and Boundary conditions should be same for the inverse code as
 %% its in the forward code used to generate data
@@ -124,6 +135,9 @@ Y_num(10:12, :, :) = q;
 Y_num(13:15, :, :) = k;
 
 % save('Y_num.csv', 'Y_num');
+%save('Y_num.mat', 'Y_num');
+writematrix(squeeze(Y_num(11, :, :)) , 'q2.csv')
+writematrix(squeeze(Y_num(14, :, :)), 'k2.csv')
 ```
 
 ```matlab
@@ -138,7 +152,7 @@ hold off
 set(gca,'FontSize',16);
 ```
 
-![figure_0.png](README_media/figure_0.png)
+![figure_0.png](InverseCode_media/figure_0.png)
 
 ```matlab
 
@@ -146,7 +160,7 @@ set(gca,'FontSize',16);
 
 %% Nonlinear
 % k_true = squeeze(Y_true(8, :, :));
-% q_true = 30.*k.^5 -600.*k.^3 + 10000.*k;
+% q_true = 30.*k_true.^5 -600.*k_true.^3 + 10000.*k_true;
 % x = squeeze(Y_num(14,:,:));
 % y = squeeze(Y_num(11,:,:));
 % plot(x(:),y(:),'g','Marker',"*","MarkerSize",6,"LineStyle","none")
