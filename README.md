@@ -14,7 +14,7 @@ $$\left\lbrace \begin{array}{c} q_1 \newline q_2 \newline q_3 \end{array} \right
 
 3) Nonlinear and Non-homogeneous: Has the rod model packaged codes considering nonlinear and non-homogeneous constitutive relationship ($$\vec{q} = \sum_{i=0}^{5} \mathbf{B(s)_i} \vec{\kappa}^i$$) more specifically,
 
-$$\left\lbrace \begin{array}{c} q_1 \newline q_2 \newline q_3 \end{array} \right\rbrace = \left\lbrace \begin{array}{c} E I_1 \kappa_1 \newline (a s^3 - b s^2 + c s + d)*(e \kappa_2^3 + f \kappa_2) \newline G J \kappa_3  \end{array}\right\rbrace$$
+$$\left\lbrace \begin{array}{c} q_1 \newline q_2 \newline q_3 \end{array} \right\rbrace = \left\lbrace \begin{array}{c} E I_1 \kappa_1 \newline (a s^3 + b s^2 + c s + d)*(e \kappa_2^3 + f \kappa_2) \newline G J \kappa_3  \end{array}\right\rbrace$$
 
 ### 2. Inverse Code 
 Contains code that solves the rod model equations using the inverse approach, i.e., given deformation data and known boundary conditions, solve for the arguments of the constitutive law
@@ -49,6 +49,7 @@ git clone https://github.com/mahmed271995/Rod-Model-Packaged-Codes
 * The inverse code is set up for input **curvature data** only, but it can be adjusted to work with other types of input deformation data
 * The code requires curvature data as `Y_true`. Be sure to import this data before running the code
 * For more details, refer to the `README.md` file in the corresponding folder
+
 
 
 
